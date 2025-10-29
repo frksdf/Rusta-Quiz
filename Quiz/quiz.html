@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusta Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div id="quiz-app">
+        <div id="intro-page" class="page-section">
+            <header>
+                <img src="Rusta.png" alt="Rusta Logo" class="logo">
+                <h1>Rusta Quiz Yarışmasına Hoş Geldiniz!</h1>
+            </header>
+            
+            <main class="intro-content">
+                
+                <h3>Puanlama Kuralları</h3>
+                <ul>
+                    <li>**Kolay Soru:** 10 puan, **Normal Soru:** 15 puan, **Zor Soru:** 20 puan.</li>
+                    <li>**Bonus (2x):** Bir soruyu sadece **tek bir katılımcı** doğru bilirse, o soru puanının **iki katını** kazanır.</li>
+                    <li>**Ceza (-1x):** Bir soruya sadece **tek bir katılımcı** yanlış cevap verirse, o soru puanının **eksiği** kadar ceza puanı alır (puanı düşülür).</li>
+                    <li>**Cevap Vermeme:** Cevap verilmeyen sorular için puanlama yapılmaz. Matriste 🚫 ile gösterilir.</li>
+                </ul>
+
+                <button onclick="startQuiz()">Yarışmayı Başlat</button>
+            </main>
+        </div>
+
+        <div id="quiz-page" class="page-section" style="display:none;">
+            <header>
+                <img src="Rusta.png" alt="Rusta Logo" class="logo small">
+                <h2>Rusta Quiz</h2>
+                <p>Soru <span id="question-number">1</span> / <span id="total-questions">15</span></p>
+            </header>
+
+            <main>
+                <div class="question-info">
+                    <h3 id="question-text">Soru metni buraya gelecek...</h3>
+                    <p>Zorluk: <span id="difficulty-level" class="label"></span> | Puan: <span id="points-value" class="label"></span></p>
+                </div>
+
+                <div id="options-container" class="options">
+                    </div>
+
+                <div class="header-padding"></div>
+                
+                <div id="participant-answers" class="participant-grid">
+                    </div>
+            </main>
+        </div>
+
+        <div id="results" class="page-section results-container" style="display:none;">
+            </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
